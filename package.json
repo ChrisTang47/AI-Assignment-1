@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "ai-assignment-1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/src/collect.js",
+    "dev": "ts-node src/collect.ts",
+    "scrape": "ts-node src/scraper.ts",
+    "test": "ts-node src/test-processing.ts",
+    "test:processing": "ts-node src/test-processing.ts"
   },
   "repository": {
     "type": "git",
@@ -19,11 +24,15 @@
   "homepage": "https://github.com/ChrisTang47/AI-Assignment-1#readme",
   "description": "",
   "devDependencies": {
-    "@types/node": "^24.9.1",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^24.9.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "playwright": "^1.56.1"
+    "better-sqlite3": "^12.4.1",
+    "better-sqlite3-proxy": "^2.11.3",
+    "playwright": "^1.56.1",
+    "sharp": "^0.34.4"
   }
 }
